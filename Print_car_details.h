@@ -80,9 +80,8 @@ void printCustomerDetails(const vector<Customer>& customers, const vector<Car>& 
         displayFile << "Color: " << (*car).getColor() << endl;
         displayFile << "Manufacturing Day: " << (*car).getManufacturingDay().day << "-" << (*car).getManufacturingDay().month << "-" << (*car).getManufacturingDay().year << endl;
         displayFile << endl;
-
-    displayFile.close();
     }
+    displayFile.close();
 }
 
 // int main() {
