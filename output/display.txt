@@ -1,0 +1,13 @@
+Customer Details:
+-----------------
+License Plate: 34A-09823
+Name: Le_Viet_Hai
+Age: 19
+Phone Number: 029030123
+Citizenship ID: 030204001999
+
+Brand: Vinfast
+Model: 14
+Color: red
+Manufacturing Day: 3-12-2004
+
