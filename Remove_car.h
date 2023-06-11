@@ -5,9 +5,10 @@
 #include <ctime>
 
 using namespace std;
+// # include "Car_class.h"
 
 void removeCar(vector<Car>& cars, const string& licensePlate) {
-    auto car = find_if(cars.begin(), cars.end(), [&](const Car& c) {
+    auto car = find_if(cars.begin(), cars.end(), [&](const Car& c) { 
         return c.getLicensePlate() == licensePlate;
     });
     ofstream displayFile("display.txt", ios::trunc); 

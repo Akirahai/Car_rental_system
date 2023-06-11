@@ -1,14 +1,1 @@
-Unavailable cars with detailed info and customer details:
-----------------------------------------------------
-License Plate: 34A-04232
-Brand: Tien
-Model: T1
-Color: red
-Manufacturing Day: 3-12-2004
---------
-Customer Details:
-Name: Le Viet Hai
-Age: 19
-Phone Number: 032313123
-Citizenship ID: 030204001999
-
+Login successful!

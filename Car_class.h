@@ -136,7 +136,7 @@ public:
     Customer(const string& licensePlate, const string& name, int age, const string& phoneNumber, const string& citizenshipID)
         : licensePlate(licensePlate), name(name), age(age), phoneNumber(phoneNumber), citizenshipID(citizenshipID) {}
 
-    const string& getLicensePlate() const {
+    string getLicensePlate() const{
         return licensePlate;
     }
 

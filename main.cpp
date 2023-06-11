@@ -11,6 +11,8 @@
 #include "Car_status.h"
 #include "Book_car.h"
 #include "Log_in.h"
+
+#include "Remove_customer.h"
 using namespace std;
 
 
@@ -48,7 +50,8 @@ int main() {
                                 cout << "4. Print car status\n";
                                 cout << "5. Remove a car\n";
                                 cout << "6. Print customer details\n";
-                                cout << "7. Change Password\n";
+                                cout << "7. Remove customer\n";
+                                cout << "8. Change Password\n";
                                 cout << "0. Quit\n\n";
                                 cout << "Enter your choice: ";
                                 getline(cin, choice);
@@ -143,6 +146,16 @@ int main() {
                                     system("start notepad.exe display.txt");
 
                                 } else if (choice == "7") {
+                                    printCarStatus_Unavailable(cars, customers);
+                                    system("start notepad.exe display.txt");
+
+                                    string licensePlate;
+                                    cout << "Enter the license plate of the car to remove customer: ";
+                                    getline(cin, licensePlate);
+                                    removeCustomer(customers, cars, licensePlate);
+                                    system("start notepad.exe display.txt");
+
+                                } else if (choice == "8") {
                                     changePassword();
                                 } else if (choice != "0") {
                                     cout << "Invalid choice. Please try again." << endl;

@@ -33,8 +33,11 @@ void printCarStatus_Available(const vector<Car>& cars) {
     displayFile << "Available cars with detailed info:" << endl;
     displayFile << "---------------------------------" << endl;
     if (availableCarsPresent) {
+        int i = 0;
         for (const Car& car : cars) {
             if (car.isAvailable()) {
+                i+=1;
+                displayFile << i << ". " ;
                 displayFile << "License Plate: " << car.getLicensePlate() << endl;
                 displayFile << "Brand: " << car.getBrand() << endl;
                 displayFile << "Model: " << car.getModel() << endl;
@@ -76,8 +79,11 @@ void printCarStatus_Unavailable(const vector<Car>& cars, const vector<Customer>&
     displayFile << "Unavailable cars with detailed info and customer details:" << endl;
     displayFile << "----------------------------------------------------" << endl;
     if (unavailableCarsPresent) {
+        int i = 0;
         for (const Car& car : cars) {
             if (!car.isAvailable()) {
+                i+=1;
+                displayFile << i << ". " ;
                 displayFile << "License Plate: " << car.getLicensePlate() << endl;
                 displayFile << "Brand: " << car.getBrand() << endl;
                 displayFile << "Model: " << car.getModel() << endl;
