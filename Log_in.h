@@ -4,10 +4,10 @@
 
 using namespace std;
 
-const string USER_FILE = "user.txt";
+
 
 bool isUserRegistered() {
-    ifstream userFile(USER_FILE);
+    ifstream userFile("user.txt");
     return userFile.good();
 }
 
@@ -16,7 +16,7 @@ bool registerUser() {
     cout << "Enter a password: ";
     getline(cin, password);
 
-    ofstream userFile(USER_FILE);
+    ofstream userFile("user.txt");
     if (!userFile) {
         cout << "Error opening user file." << endl;
         return false;
@@ -34,7 +34,7 @@ bool loginUser() {
     getline(cin, password);
     system("taskkill /im notepad.exe /f 1>NULL");
 
-    ifstream userFile(USER_FILE);
+    ifstream userFile("user.txt");
 
     string storedPassword;
     getline(userFile, storedPassword);
@@ -55,7 +55,7 @@ void changePassword() {
     cout << "Enter a new password: ";
     getline(cin, newPassword);
 
-    ofstream userFile(USER_FILE);
+    ofstream userFile("user.txt");
     if (!userFile) {
         cout << "Error opening user file." << endl;
         return;
@@ -72,7 +72,7 @@ void sendPasswordByEmail() {
     cout << "Enter your email address: ";
     getline(cin, email);
 
-    ifstream userFile(USER_FILE);
+    ifstream userFile("user.txt");
     if (!userFile) {
         cout << "Error opening user file." << endl;
         return;
