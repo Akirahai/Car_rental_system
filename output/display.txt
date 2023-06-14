@@ -1,1 +1,51 @@
-Login successful!
+Car Details:
+------------
+1. License Plate: 34A-05567
+Brand: Honda
+Model: V1
+Color: Red
+Manufacturing Day: 3-12-2004
+Status: Available
+
+2. License Plate: 30A-04343
+Brand: Vinfast
+Model: V1
+Color: green
+Manufacturing Day: 4-12-2005
+Status: Not Available
+
+3. License Plate: 39B-04412
+Brand: Honda
+Model: O1
+Color: Red
+Manufacturing Day: 3-12-2003
+Status: Available
+
+4. License Plate: 35A-05231
+Brand: Honda
+Model: V1
+Color: red
+Manufacturing Day: 5-12-2006
+Status: Available
+
+5. License Plate: 31A-00000
+Brand: Hyundai
+Model: U1
+Color: Red
+Manufacturing Day: 20-3-2010
+Status: Available
+
+6. License Plate: 34A-05234
+Brand: Vinfast
+Model: V2
+Color: Red
+Manufacturing Day: 4-12-2001
+Status: Available
+
+7. License Plate: 34A-07861
+Brand: 0
+Model: 0
+Color: red
+Manufacturing Day: 4-12-2004
+Status: Available
+

@@ -1,8 +1,51 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <conio.h>
 
 using namespace std;
+
+string getPassword() {
+    string password;
+    char ch;
+
+    while ((ch = _getch()) != '\r') {     // Read characters until Enter is pressed
+    // _getch() is used to read character without displaying it.
+
+        if (ch == '\b') {  // Handle backspace
+            if (!password.empty()) {
+                cout << "\b \b";
+                password.pop_back();
+            }
+        } else {
+            cout << '*';
+            password += ch;
+        }
+    }
+
+    return password;
+}
+
+bool loginUser() {
+    string password;
+
+    cout << "Enter your password: ";
+    password = getPassword();
+    cout << endl;
+
+    ifstream userFile("user.txt");
+
+    string storedPassword;
+    getline(userFile, storedPassword);
+
+    if (password == storedPassword) {
+        cout << "Login successful!" << endl;
+        return true;
+    } else {
+        cout << "Incorrect password." << endl;
+        return false;
+    }
+}
 
 
 
@@ -28,27 +71,6 @@ bool registerUser() {
     return true;
 }
 
-bool loginUser() {
-    string password;
-    cout << "Enter your password: ";
-    getline(cin, password);
-    system("taskkill /im notepad.exe /f 1>NULL");
-
-    ifstream userFile("user.txt");
-
-    string storedPassword;
-    getline(userFile, storedPassword);
-
-    if (password == storedPassword) {
-        ofstream displayFile("display.txt", ios::trunc);
-        displayFile << "Login successful!" << endl;
-        displayFile.close();
-        return true;
-    } else {
-        cout << "Incorrect password." << endl;
-        return false;
-    }
-}
 
 void changePassword() {
     string newPassword;

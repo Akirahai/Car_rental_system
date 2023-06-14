@@ -170,19 +170,13 @@ int main() {
                     }
                     else {
                         times += 1;
-                        ofstream displayFile("display.txt", ios::trunc);
                         cout << endl;
-                        displayFile << "Invalid password. Please try one more time." << endl;
-                        displayFile << "You have " << 3 - times << " more times to try." << endl;
-                        displayFile.close();
-                        system("start notepad.exe display.txt");
+                        cout << "Invalid password. Please try one more time." << endl;
+                        cout << "You have " << 3 - times << " more times to try." << endl;
                     }
 
                     if (times >=3) {
-                        ofstream displayFile("display.txt", ios::trunc);
-                        displayFile << "You have entered the wrong password 3 times. Please try again later." << endl;
-                        displayFile.close();
-                        system("start notepad.exe display.txt");
+                        cout << "You have entered the wrong password 3 times. Please try again later." << endl;
                         break;
                     }
                 }
